@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_PropertySheetDisplayName>Dependencies_Debug</_PropertySheetDisplayName>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(OPENCV_DIR)\..\..\include;$(ProjectDir)\external\exiv2-0.24\msvc2012\include\;$(ProjectDir)\external\libconfig-1.5\lib\</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(OPENCV_DIR)\lib;$(ProjectDir)\external\exiv2-0.24\msvc2012\exiv2lib\Win32\DebugDLL;$(ProjectDir)\external\libconfig-1.5\Debug\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_world300d.lib;exiv2d.lib;libconfig++.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup />
+</Project>

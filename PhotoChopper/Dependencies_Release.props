@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_PropertySheetDisplayName>Dependencies_Release</_PropertySheetDisplayName>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(OPENCV_DIR)\..\..\include;$(ProjectDir)\external\exiv2-0.24\msvc2012\include\;$(ProjectDir)\external\libconfig-1.5\lib\</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(OPENCV_DIR)\lib;$(ProjectDir)\external\exiv2-0.24\msvc2012\exiv2lib\Win32\ReleaseDLL;$(ProjectDir)\external\libconfig-1.5\Release</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_world300.lib;exiv2.lib;libconfig++.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup />
+</Project>
