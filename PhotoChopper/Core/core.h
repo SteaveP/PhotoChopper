@@ -4,6 +4,8 @@
 #include <vector>
 #include <map>
 
+#include <memory>
+
 #include "../utils/parameters.h"
 
 namespace pc
@@ -18,7 +20,7 @@ class ProcessorImpl;
 class Processor
 {		
 private:
-	std::auto_ptr<ProcessorImpl> m_impl;
+	std::unique_ptr<ProcessorImpl> m_impl;
 public:
 
 	Processor(const utils::Parameters& params = utils::Parameters());

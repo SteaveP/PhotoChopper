@@ -62,7 +62,7 @@ public:
 	void SetFile(const std::string& filename);
 
 private:
-	typedef std::auto_ptr<utils::filesystem::File> FilePtr;
+	typedef std::unique_ptr<utils::filesystem::File> FilePtr;
 	FilePtr m_file;
 };
 

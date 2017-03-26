@@ -22,7 +22,7 @@ void Log::init(LogType type)
 
 Log& Log::get()
 {
-	static std::auto_ptr<Log> log;
+	static std::unique_ptr<Log> log;
 
 	if (log.get() == nullptr)
 	{
